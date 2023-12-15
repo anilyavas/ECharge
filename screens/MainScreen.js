@@ -1,16 +1,22 @@
-import { View, Text, TextInput, StyleSheet, Pressable } from 'react-native';
+import {
+  View,
+  SafeAreaView,
+  TextInput,
+  StyleSheet,
+  Pressable,
+} from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 export default function MainScreen() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.searchBar}>
         <TextInput style={styles.textInput} placeholder="Find a location" />
         <Pressable style={styles.iconButton}>
           <Ionicons name="search" size={16} color="black" />
         </Pressable>
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -21,7 +27,7 @@ const styles = StyleSheet.create({
   },
 
   searchBar: {
-    width: 300,
+    width: 350,
     height: 40,
     flexDirection: 'row',
     alignItems: 'center',
@@ -36,6 +42,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   iconButton: {
-    paddingLeft: 100,
+    paddingLeft: 140,
   },
 });
