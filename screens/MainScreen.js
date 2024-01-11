@@ -4,18 +4,21 @@ import {
   TextInput,
   StyleSheet,
   Pressable,
+  Text,
 } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import MapView from 'react-native-maps';
 
 export default function MainScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.searchBar}>
-        <TextInput style={styles.textInput} placeholder="Find a location" />
+        <TextInput style={styles.textInput} placeholder='Find a location' />
         <Pressable style={styles.iconButton}>
-          <Ionicons name="search" size={16} color="black" />
+          <Ionicons name='search' size={16} color='black' />
         </Pressable>
       </View>
+      <MapView style={styles.map} />
     </SafeAreaView>
   );
 }
@@ -43,5 +46,9 @@ const styles = StyleSheet.create({
   },
   iconButton: {
     paddingLeft: 140,
+  },
+  map: {
+    height: '100%',
+    width: '100%',
   },
 });
