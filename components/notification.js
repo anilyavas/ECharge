@@ -39,6 +39,7 @@ const chargingStatus = [
 export default function Notification() {
   return (
     <FlatList
+      showsVerticalScrollIndicator={false}
       keyExtractor={(item) => item.id}
       data={chargingStatus}
       renderItem={({ item }) => (
