@@ -18,12 +18,13 @@ export default function MainScreen() {
   });
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.searchBar}>
+      {/*  <View style={styles.searchBar}>
         <TextInput style={styles.textInput} placeholder='Find a location' />
         <Pressable style={styles.iconButton}>
           <Ionicons name='search' size={16} color='black' />
         </Pressable>
-      </View>
+      </View> 
+      */}
       <MapView style={styles.map} region={mapRegion} />
     </SafeAreaView>
   );
@@ -57,7 +58,10 @@ const styles = StyleSheet.create({
     paddingLeft: 140,
   },
   map: {
-    height: '100%',
-    width: '100%',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
   },
 });
